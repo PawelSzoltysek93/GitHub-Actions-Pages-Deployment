@@ -74,6 +74,7 @@
     --primary-foreground: 210 40% 98%;
 
     --border: 214 32% 91%;
+    scroll-behavior: smooth;
   }
   .dark {
     --background: 222 47% 4%;
@@ -110,10 +111,6 @@
 
   * {
     @apply border-border;
-  }
-
-  html {
-    @apply scroll-smooth;
   }
 
   body {

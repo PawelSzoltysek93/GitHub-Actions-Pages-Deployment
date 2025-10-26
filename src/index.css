@@ -1,5 +1,9 @@
 @import "tailwindcss";
-
+:root {
+  --toastify-color-light: #7f6ce0;
+  --toastify-text-color-light: #fff;
+  --toastify-color-success: #fff;
+}
 @theme {
   --color-border: hsl(var(--border));
   --color-background: hsl(var(--background));

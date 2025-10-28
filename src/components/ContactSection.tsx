@@ -32,7 +32,7 @@ export const ContactSection = () => {
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
           Get In <span className="text-primary"> Touch</span>
         </h2>
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto lg:text-xl">
           Have a project in mind or want to collaborate? Feel free to reach out.
           I'm always open to discussing new opportunities.
         </p>
@@ -45,10 +45,10 @@ export const ContactSection = () => {
                   <Mail className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-medium"> Email</h4>
+                  <h4 className="font-medium lg:text-xl"> Email</h4>
                   <a
                     href="mailto:pawel.szoltysek.dev@gmail.com"
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="text-muted-foreground hover:text-primary transition-colors lg:text-xl"
                   >
                     pawel.szoltysek.dev@gmail.com
                   </a>
@@ -59,29 +59,29 @@ export const ContactSection = () => {
                   <MapPin className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-medium"> Location</h4>
-                  <a className="text-muted-foreground hover:text-primary transition-colors">
+                  <h4 className="font-medium lg:text-xl"> Location</h4>
+                  <a className="text-muted-foreground hover:text-primary transition-colors lg:text-xl">
                     Erkelenz, North Rhine-Westphalia, Germany
                   </a>
                 </div>
               </div>
             </div>
             <div className="pt-8">
-              <h4 className="font-medium mb-4"> Connect With Me</h4>
+              <h4 className="font-medium mb-4 text-2xl"> Connect With Me</h4>
               <div className="flex space-x-4 justify-center">
                 <a
                   href="https://linkedin.com/in/pawel-szoltysek-dev"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Linkedin />
+                  <Linkedin size={40} />
                 </a>
                 <a
                   href="https://github.com/PawelSzoltysek93"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Github />
+                  <Github size={40} />
                 </a>
               </div>
             </div>
@@ -140,7 +140,7 @@ export const ContactSection = () => {
               <button
                 type="submit"
                 className={cn(
-                  "cosmic-button w-full flex items-center justify-center gap-2"
+                  "cosmic-button w-full flex items-center justify-center gap-2 hover:cursor-pointer"
                 )}
               >
                 <Send size={16} />

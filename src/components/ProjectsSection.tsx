@@ -41,7 +41,7 @@ export const ProjectsSection = () => {
           {" "}
           Featured <span className="text-primary"> Projects</span>
         </h2>
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto lg:text-xl">
           Here are some of my recent projects. Each project was carefully
           crafted with attention to detail, performance and user experience.
         </p>
@@ -71,7 +71,7 @@ export const ProjectsSection = () => {
                 </div>
 
                 <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
-                <p className="text-muted-foreground text-sm mb-4">
+                <p className="text-muted-foreground  mb-4">
                   {project.description}
                 </p>
                 <div className="flex justify-between items-center">

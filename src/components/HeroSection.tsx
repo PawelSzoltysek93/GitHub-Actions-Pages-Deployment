@@ -4,8 +4,15 @@ export const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-center px-4"
+      className="relative min-h-screen flex flex-col items-center justify-center px-4 md:px-12 gap-6 md:gap-10"
     >
+      <div className="relative w-[150px] h-[150px] sm:w-[250px] sm:h-[250px] md:w-[300px] md:h-[300px] lg:w-[350px] lg:h-[350px] ">
+        <img
+          src="better1.png"
+          alt="selfie"
+          className="h-full w-full object-cover object-[center_20%] rounded-full"
+        />
+      </div>
       <div className="container max-w-4xl mx-auto text-center z-10">
         <div className="space-y-6">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
@@ -20,9 +27,9 @@ export const HeroSection = () => {
             </span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-            I create stellar web experiences with modern technologies.
-            Specializing in front-end development, I build interfces that are
-            both beautiful and functional.
+            I build websites that capture attention, inspire trust, and make
+            every interaction a memorable experience for your users on every
+            device.
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">

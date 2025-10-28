@@ -12,19 +12,20 @@ export const AboutSection = () => {
             <h3 className="text-2xl font-semibold">
               Passionate Web Developer & Tech Creator
             </h3>
-            <p className="text-muted-foreground">
-              With over 5 year of experience in web development, I specialize in
-              creating responsive, accesible, and perofrmant web applications
-              using modern technologies.
+            <p className="text-muted-foreground lg:text-xl">
+              With a solid foundation in HTML/CSS,JavaScript and{" "}
+              <span className="text-primary">React</span> I am a highly
+              motivated developer focused on building clean, efficient, and
+              user-centric web solutions.
             </p>
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground lg:text-xl">
               I'm passionate about creating elegant solutions to complex
               problems, and I'm constantly learning new technologies and
               techniques to stay at the forefront of the ever-evolving web
               landscape.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
-              <a href="contact" className="cosmic-button">
+              <a href="#contact" className="cosmic-button">
                 {" "}
                 Get In Touch
               </a>
@@ -54,7 +55,7 @@ export const AboutSection = () => {
                 <div className="text-left">
                   <h4 className="font-semibold text-lg"> UI/UX Design</h4>
                   <p className="text-muted-foreground">
-                    Designing intuitive user interfaces and seamless user
+                    Building intuitive user interfaces and seamless user
                     experiences.
                   </p>
                 </div>
@@ -69,7 +70,7 @@ export const AboutSection = () => {
                   <h4 className="font-semibold text-lg"> Project Management</h4>
                   <p className="text-muted-foreground">
                     Leading projects from conception to completion with agile
-                    technologies
+                    technologies.
                   </p>
                 </div>
               </div>

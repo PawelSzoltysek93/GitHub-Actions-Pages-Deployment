@@ -1,20 +1,31 @@
 import { Github, Linkedin, Mail, MapPin, Send } from "lucide-react";
+import emailjs from "@emailjs/browser";
 import { cn } from "../lib/utils";
 import { toast } from "react-toastify";
+import { useRef } from "react";
+import type { FormEvent } from "react";
+
+const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 export const ContactSection = () => {
-  const handleSubmit = (e: React.FormEvent) => {
+  const form = useRef<HTMLFormElement | null>(null);
+  const sendEmail = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    toast.success("Message Send, Thank You!", {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: false,
-      draggable: true,
-      progress: undefined,
-    });
+    try {
+      await emailjs.sendForm(serviceId, templateId, form.current!, publicKey);
+      toast.success("Message sent — check your email for confirmation.", {
+        position: "top-right",
+      });
+      form.current?.reset();
+    } catch {
+      toast.error("Failed to send message. Please try again later.", {
+        position: "top-right",
+      });
+    }
   };
+
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
@@ -27,10 +38,7 @@ export const ContactSection = () => {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-8">
-            <h3 className="text-2xl font-semibold mb-6">
-              {" "}
-              Contact Information
-            </h3>
+            <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
             <div className="space-y-6 justify-center">
               <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-full bg-primary/10">
@@ -42,7 +50,6 @@ export const ContactSection = () => {
                     href="mailto:pawel.szoltysek.dev@gmail.com"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    {" "}
                     pawel.szoltysek.dev@gmail.com
                   </a>
                 </div>
@@ -65,10 +72,15 @@ export const ContactSection = () => {
                 <a
                   href="https://linkedin.com/in/pawel-szoltysek-dev"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <Linkedin />
                 </a>
-                <a href="https://github.com/PawelSzoltysek93" target="_blank">
+                <a
+                  href="https://github.com/PawelSzoltysek93"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Github />
                 </a>
               </div>
@@ -76,19 +88,18 @@ export const ContactSection = () => {
           </div>
           <div className="bg-card p-8 rounded-lg shadow-xs">
             <h3 className="text-2xl font-semibold mb-6"> Send a message</h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form ref={form} onSubmit={sendEmail} className="space-y-6">
               <div>
                 <label
-                  htmlFor="name"
+                  htmlFor="user_name"
                   className="block text-sm font-medium mb-2"
                 >
-                  {" "}
                   Your Name
                 </label>
                 <input
-                  id="name"
+                  id="user_name"
                   type="text"
-                  name="name"
+                  name="user_name"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
                   placeholder="John Doe..."
@@ -96,16 +107,15 @@ export const ContactSection = () => {
               </div>
               <div>
                 <label
-                  htmlFor="email"
+                  htmlFor="from_email"
                   className="block text-sm font-medium mb-2"
                 >
-                  {" "}
                   Your Email
                 </label>
                 <input
-                  id="email"
+                  id="from_email"
                   type="email"
-                  name="email"
+                  name="from_email"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
                   placeholder="john.doe@gmail.com"
@@ -116,13 +126,13 @@ export const ContactSection = () => {
                   htmlFor="message"
                   className="block text-sm font-medium mb-2"
                 >
-                  {" "}
                   Your Message
                 </label>
                 <textarea
                   id="message"
-                  name="name"
+                  name="message"
                   required
+                  rows={4}
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none"
                   placeholder="Hello, I'd like to talk about..."
                 />
@@ -136,6 +146,23 @@ export const ContactSection = () => {
                 <Send size={16} />
                 Send Message
               </button>
+
+              {/* Privacy Notice - DSGVO/GDPR compliant */}
+              <p className="text-xs text-muted-foreground text-center leading-relaxed pt-2">
+                Your personal data will be used solely to respond to your
+                inquiry and will never be shared with third parties. By
+                submitting this form, you agree to the processing of your data
+                in accordance with our{" "}
+                <a
+                  href="/privacy-policy"
+                  className="text-primary hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  privacy policy
+                </a>
+                .
+              </p>
             </form>
           </div>
         </div>

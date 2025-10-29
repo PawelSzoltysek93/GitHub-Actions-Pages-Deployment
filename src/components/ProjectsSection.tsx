@@ -31,6 +31,16 @@ const projects = [
     demoUrl: "#",
     githubURl: "#",
   },
+  {
+    id: 4,
+    title: "Re-design Project",
+    description:
+      "Redesign project in which my task was to rebuild an old website with a modern look and improved user experience using new technologies such as React and Next.js.",
+    image: "/projects/projectRedesign.png",
+    tags: ["TypeScript", "React", "Next.Js"],
+    demoUrl: "#",
+    githubURl: "https://github.com/PawelSzoltysek93/Next-js-redesign-project",
+  },
 ];
 
 export const ProjectsSection = () => {

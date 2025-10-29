@@ -6,10 +6,10 @@ const projects = [
     title: "CryptoTraderJS",
     description:
       "My first project fully build in JavaScript, completely in node.js terminal showing my skills in working with different APIs and fetching data.",
-    image: "/projects/project1.webp",
+    image: "/projects/cryptotraderjs.png",
     tags: ["JavaScript", "Node.js"],
-    demoUrl: "#",
-    githubURl: "#",
+
+    githubURl: "https://github.com/PawelSzoltysek93/CryptoTraderJS",
   },
   {
     id: 2,
@@ -39,7 +39,7 @@ export const ProjectsSection = () => {
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
           {" "}
-          Featured <span className="text-primary"> Projects</span>
+          Featured <span className="text-primary text-glow"> Projects</span>
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto lg:text-xl">
           Here are some of my recent projects. Each project was carefully
@@ -55,7 +55,7 @@ export const ProjectsSection = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
               <div className="p-6">
@@ -76,17 +76,21 @@ export const ProjectsSection = () => {
                 </p>
                 <div className="flex justify-between items-center">
                   <div className="flex space-x-3">
-                    <a
-                      href={project.demoUrl}
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300 "
-                      target="_blank"
-                    >
-                      <ExternalLink size={20} />
-                    </a>
+                    {project.demoUrl && (
+                      <a
+                        href={project.demoUrl}
+                        className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <ExternalLink size={20} />
+                      </a>
+                    )}
                     <a
                       href={project.githubURl}
                       className="text-foreground/80 hover:text-primary transition-colors duration-300"
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <Github size={20} />
                     </a>
@@ -101,6 +105,7 @@ export const ProjectsSection = () => {
             href="https://github.com/PawelSzoltysek93"
             target="_blank"
             className="cosmic-button w-fit flex items-center mx-auto gap-2"
+            rel="noopener noreferrer"
           >
             Check My GitHub <ArrowRight size={16} />
           </a>

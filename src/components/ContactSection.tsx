@@ -60,7 +60,7 @@ export const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-medium lg:text-xl"> Location</h4>
-                  <a className="text-muted-foreground hover:text-primary transition-colors lg:text-xl">
+                  <a className="text-muted-foreground hover:text-primary hover:cursor-pointer transition-colors lg:text-xl">
                     Erkelenz, North Rhine-Westphalia, Germany
                   </a>
                 </div>
@@ -102,7 +102,7 @@ export const ContactSection = () => {
                   name="user_name"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
-                  placeholder="John Doe..."
+                  placeholder="John Doe"
                 />
               </div>
               <div>

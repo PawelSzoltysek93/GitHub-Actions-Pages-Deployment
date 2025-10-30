@@ -1,22 +1,25 @@
 import { useEffect, useState } from "react";
 import { cn } from "../lib/utils";
 import { Menu, X } from "lucide-react";
-
-const navItems = [
-  { name: "Home", href: "#hero" },
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Contact", href: "#contact" },
-];
+import { useTranslation } from "react-i18next";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export const Navbar = () => {
+  const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const navItems = [
+    { name: t("nav.home"), href: "#hero" },
+    { name: t("nav.about"), href: "#about" },
+    { name: t("nav.skills"), href: "#skills" },
+    { name: t("nav.projects"), href: "#projects" },
+    { name: t("nav.contact"), href: "#contact" },
+  ];
+
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.screenY > 10);
+      setIsScrolled(window.scrollY > 10);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -52,6 +55,7 @@ export const Navbar = () => {
               {item.name}
             </a>
           ))}
+          <LanguageSwitcher />
         </div>
         {/* mobile nav */}
 
@@ -77,12 +81,15 @@ export const Navbar = () => {
               <a
                 key={key}
                 href={item.href}
-                className="text-foreground/80 hover:text-primary transition-colors duration-300 border p-8 rounded-3xl"
+                className="w-screen text-foreground/80 hover:text-primary transition-colors duration-300 border border-primary/40 p-2 "
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
               </a>
             ))}
+            <div className="flex justify-center pt-4">
+              <LanguageSwitcher />
+            </div>
           </div>
         </div>
       </div>

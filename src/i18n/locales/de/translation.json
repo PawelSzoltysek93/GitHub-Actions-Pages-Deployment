@@ -1,0 +1,103 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "about": "Über mich",
+    "skills": "Fähigkeiten",
+    "projects": "Projekte",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "greeting": "Hallo, ich bin",
+    "firstName": "Pawel",
+    "lastName": "Szoltysek",
+    "description": "Ich entwickle Webseiten, die Aufmerksamkeit erregen, Vertrauen schaffen und jede Interaktion auf jedem Gerät zu einem unvergesslichen Erlebnis machen.",
+    "cta": "Meine Arbeiten ansehen",
+    "scroll": "Scrollen"
+  },
+  "about": {
+    "title": "Über",
+    "titleHighlight": "mich",
+    "heading": "Leidenschaftlicher Webentwickler & Tech-Creator",
+    "description1": "Mit einer soliden Grundlage in HTML/CSS, JavaScript und <highlight>React</highlight> bin ich ein hochmotivierter Entwickler, der sich auf die Erstellung sauberer, effizienter und benutzerzentrierter Weblösungen konzentriert.",
+    "description2": "Ich habe eine Leidenschaft dafür, elegante Lösungen für komplexe Probleme zu entwickeln, und lerne ständig neue Technologien und Techniken, um an der Spitze der sich ständig weiterentwickelnden Weblandschaft zu bleiben.",
+    "getInTouch": "Kontakt aufnehmen",
+    "cards": {
+      "webDev": {
+        "title": "Webentwicklung",
+        "description": "Erstellung responsiver Websites und Webanwendungen mit modernen Frameworks."
+      },
+      "uiux": {
+        "title": "UI/UX Design",
+        "description": "Entwicklung intuitiver Benutzeroberflächen und nahtloser Benutzererlebnisse."
+      },
+      "project": {
+        "title": "Projektmanagement",
+        "description": "Projektleitung von der Konzeption bis zur Fertigstellung mit agilen Methoden."
+      }
+    }
+  },
+  "skills": {
+    "title": "Meine",
+    "titleHighlight": "Fähigkeiten",
+    "categories": {
+      "all": "Alle",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Werkzeuge"
+    }
+  },
+  "projects": {
+    "title": "Ausgewählte",
+    "titleHighlight": "Projekte",
+    "subtitle": "Hier sind einige meiner aktuellen Projekte. Jedes Projekt wurde mit viel Liebe zum Detail, hoher Performance und Fokus auf Benutzererfahrung entwickelt.",
+    "githubButton": "Mein GitHub ansehen",
+    "items": {
+      "cryptotrader": {
+        "description": "Mein erstes vollständig in JavaScript entwickeltes Projekt, komplett im node.js-Terminal, das meine Fähigkeiten im Umgang mit verschiedenen APIs und beim Datenabruf zeigt."
+      },
+      "jobtracker": {
+        "description": "Meine einfache Anwendung in Next.js, die ich für den eigenen Gebrauch erstellt habe, die sich jedoch zu etwas Größerem entwickelt hat und es Nutzer:innen ermöglicht, eigene Konten zu erstellen und ihren Bewerbungsprozess zu verfolgen."
+      },
+      "ecommerce": {
+        "description": "Mein eigener E-Commerce-Shop, erstellt mit Next.js mit grundlegender Shop-Funktionalität."
+      },
+      "redesign": {
+        "title": "Redesign-Projekt",
+        "description": "Redesign-Projekt, bei dem meine Aufgabe darin bestand, eine alte Website mit modernem Look und verbesserter Benutzererfahrung mithilfe moderner Technologien wie React und Next.js neu zu gestalten."
+      }
+    }
+  },
+  "contact": {
+    "title": "Kontakt",
+    "titleHighlight": "aufnehmen",
+    "subtitle": "Haben Sie ein Projekt im Kopf oder möchten Sie zusammenarbeiten? Melden Sie sich gerne.. Ich bin immer offen für die Diskussion neuer Möglichkeiten.",
+    "info": {
+      "title": "Kontaktinformationen",
+      "email": "E-Mail",
+      "location": "Standort",
+      "connect": "Vernetzen Sie sich mit mir"
+    },
+    "form": {
+      "title": "Nachricht senden",
+      "name": "Ihr Name",
+      "namePlaceholder": "Max Mustermann",
+      "email": "Ihre E-Mail",
+      "emailPlaceholder": "max.mustermann@gmail.com",
+      "message": "Ihre Nachricht",
+      "messagePlaceholder": "Hallo, ich würde gerne über... sprechen",
+      "submit": "Nachricht senden",
+      "privacy": "Ihre persönlichen Daten werden ausschließlich zur Beantwortung Ihrer Anfrage verwendet und niemals an Dritte weitergegeben. Mit dem Absenden dieses Formulars stimmen Sie der Verarbeitung Ihrer Daten gemäß unserer Datenschutzerklärung zu.",
+      "privacyLink": "Datenschutzerklärung"
+    },
+    "toast": {
+      "success": "Nachricht gesendet — Überprüfen Sie Ihre E-Mail zur Bestätigung.",
+      "error": "Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es später erneut."
+    }
+  },
+  "footer": {
+    "createdBy": "Erstellt von Pawel Szoltysek",
+    "legal": "Impressum",
+    "privacy": "Datenschutzerklärung",
+    "backToTop": "Nach oben"
+  }
+}

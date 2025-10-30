@@ -1,0 +1,105 @@
+{
+  "nav": {
+    "home": "Strona główna",
+    "about": "O mnie",
+    "skills": "Umiejętności",
+    "projects": "Projekty",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "greeting": "Cześć, jestem",
+    "firstName": "Paweł",
+    "lastName": "Szołtysek",
+    "description": "Tworzę strony internetowe, które przyciągają uwagę, budują zaufanie i sprawiają, że każda interakcja jest niezapomnianym doświadczeniem dla użytkowników na każdym urządzeniu.",
+    "cta": "Zobacz Moje Prace",
+    "scroll": "Przewiń"
+  },
+  "about": {
+    "title": "O",
+    "titleHighlight": "mnie",
+    "heading": "Pasjonat Tworzenia Stron & T Technologii",
+    "description1": "Mając solidne podstawy w HTML/CSS, JavaScript i <highlight>React</highlight>, jestem bardzo zmotywowanym programistą skupionym na budowaniu czystych, wydajnych i zorientowanych na użytkownika rozwiązań webowych.",
+    "description2": "Pasjonuję się tworzeniem eleganckich rozwiązań dla złożonych problemów i nieustannie uczę się nowych technologii i technik, aby pozostać na czele ciągle ewoluującego krajobrazu web developmentu.",
+    "getInTouch": "Skontaktuj się",
+    "cards": {
+      "webDev": {
+        "title": "Tworzenie Stron",
+        "description": "Tworzenie responsywnych stron internetowych i aplikacji webowych z wykorzystaniem nowoczesnych frameworków."
+      },
+      "uiux": {
+        "title": "UI/UX Design",
+        "description": "Budowanie intuicyjnych interfejsów użytkownika i płynnych doświadczeń użytkownika."
+      },
+      "project": {
+        "title": "Zarządzanie Projektami",
+        "description": "Prowadzenie projektów od koncepcji do ukończenia z wykorzystaniem technologii zwinnych."
+      }
+    }
+  },
+  "skills": {
+    "title": "Moje",
+    "titleHighlight": "Umiejętności",
+    "categories": {
+      "all": "Wszystkie",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Narzędzia"
+    }
+  },
+  "projects": {
+    "title": "Wybrane",
+    "titleHighlight": "Projekty",
+    "subtitle": "Oto niektóre z moich ostatnich projektów. Każdy projekt został starannie wykonany z dbałością o szczegóły, wydajność i doświadczenie użytkownika.",
+    "githubButton": "Zobacz Mój GitHub",
+    "items": {
+      "cryptotrader": {
+        "description": "Mój pierwszy projekt w pełni zbudowany w JavaScript, całkowicie w terminalu node.js, pokazujący moje umiejętności w pracy z różnymi API i pobieraniu danych."
+      },
+      "jobtracker": {
+        "description": "Moja prosta aplikacja w Next.js, którą stworzyłem do własnego użytku, ale przekształciła się w coś większego, umożliwiając użytkownikom tworzenie własnych kont i śledzenie procesu aplikowania."
+      },
+      "ecommerce": {
+        "description": "Mój własny sklep E-commerce stworzony w Wordpress  z podstawową funkcjonalnością sklepu."
+      },
+      "redesign": {
+        "title": "Projekt Re-design",
+        "description": "Projekt w którym moim zadaniem było przebudowanie starej strony internetowej z nowoczesnym wyglądem i ulepszonym doświadczeniem użytkownika przy użyciu nowych technologii takich jak React i Next.js."
+      }
+    }
+  },
+  "contact": {
+    "title": "Skontaktuj",
+    "titleHighlight": "się",
+    "subtitle": "Masz na myśli jakiś projekt lub chcesz współpracować? Śmiało odezwij się! Jestem otwarty na dyskusję o nowych możliwościach.",
+    "info": {
+      "title": "Informacje Kontaktowe",
+      "email": "Email",
+      "location": "Lokalizacja",
+      "connect": "Połącz się ze mną"
+    },
+    "form": {
+      "title": "Wyślij wiadomość",
+      "name": "Twoje Imię",
+      "namePlaceholder": "Jan Kowalski",
+      "email": "Twój Email",
+      "emailPlaceholder": "jan.kowalski@gmail.com",
+      "message": "Twoja Wiadomość",
+      "messagePlaceholder": "Cześć, chciałbym porozmawiać o...",
+      "submit": "Wyślij Wiadomość",
+      "privacy": "Twoje dane osobowe będą wykorzystane wyłącznie w celu odpowiedzi na Twoje zapytanie i nigdy nie będą udostępniane osobom trzecim. Wysyłając ten formularz, zgadzasz się na przetwarzanie Twoich danych zgodnie z naszą",
+      "privacyLink": "polityką prywatności"
+    },
+    "toast": {
+      "success": "Wiadomość wysłana — sprawdź swoją skrzynkę e-mail w celu potwierdzenia.",
+      "error": "Nie udało się wysłać wiadomości. Spróbuj ponownie później."
+    }
+  },
+  "footer": {
+    "createdBy": "Stworzone przez Paweł Szołtysek",
+    "legal": "Informacje Prawne",
+    "privacy": "Polityka Prywatności",
+    "backToTop": "Wróć na górę"
+  }
+
+
+}

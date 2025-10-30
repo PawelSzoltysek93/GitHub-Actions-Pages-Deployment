@@ -1,59 +1,59 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
-
-const projects = [
-  {
-    id: 1,
-    title: "CryptoTraderJS",
-    description:
-      "My first project fully build in JavaScript, completely in node.js terminal showing my skills in working with different APIs and fetching data.",
-    image: "/projects/cryptotraderjs.png",
-    tags: ["JavaScript", "Node.js"],
-
-    githubURl: "https://github.com/PawelSzoltysek93/CryptoTraderJS",
-  },
-  {
-    id: 2,
-    title: "JobTracker",
-    description:
-      "My Simple application  in Next.js which I created for my own usage but it enrolled into something bigger allowing users creating own accounts and track their applying process",
-    image: "/projects/project2.webp",
-    tags: ["Next.Js", "TypeScipt", "SupaBase"],
-    demoUrl: "#",
-    githubURl: "#",
-  },
-  {
-    id: 3,
-    title: "E-commerce Shop",
-    description:
-      "My own E-commerce shop created in Next.js with basic shop functionality",
-    image: "/projects/project3.jpg",
-    tags: ["TypeScript", "React", "TailwindCSS"],
-    demoUrl: "#",
-    githubURl: "#",
-  },
-  {
-    id: 4,
-    title: "Re-design Project",
-    description:
-      "Redesign project in which my task was to rebuild an old website with a modern look and improved user experience using new technologies such as React and Next.js.",
-    image: "/projects/projectRedesign.png",
-    tags: ["TypeScript", "React", "Next.Js"],
-    demoUrl: "#",
-    githubURl: "https://github.com/PawelSzoltysek93/Next-js-redesign-project",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 export const ProjectsSection = () => {
+  const { t } = useTranslation();
+
+  // Przenieś projects do środka komponentu, żeby mieć dostęp do t()
+  const projects = [
+    {
+      id: 1,
+      title: "CryptoTraderJS",
+      description: t("projects.items.cryptotrader.description"),
+      image: "/projects/cryptotraderjs.png",
+      tags: ["JavaScript", "Node.js"],
+      githubURl: "https://github.com/PawelSzoltysek93/CryptoTraderJS",
+    },
+    {
+      id: 2,
+      title: "JobTracker",
+      description: t("projects.items.jobtracker.description"),
+      image: "/projects/project2.webp",
+      tags: ["Next.Js", "TypeScipt", "SupaBase"],
+      demoUrl: "#",
+      githubURl: "#",
+    },
+    {
+      id: 3,
+      title: "E-commerce Shop",
+      description: t("projects.items.ecommerce.description"),
+      image: "/projects/project3.jpg",
+      tags: ["Wordpress", "WooCommerce"],
+      demoUrl: "#",
+      githubURl: "#",
+    },
+    {
+      id: 4,
+      title: t("projects.items.redesign.title"),
+      description: t("projects.items.redesign.description"),
+      image: "/projects/projectRedesign.png",
+      tags: ["TypeScript", "React", "Next.Js"],
+      demoUrl: "#",
+      githubURl: "https://github.com/PawelSzoltysek93/Next-js-redesign-project",
+    },
+  ];
+
   return (
     <section id="projects" className="py-24 px-4 relative ">
       <div className="container mx-auto max-w-5xl overflow-hidden">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          {" "}
-          Featured <span className="text-primary text-glow"> Projects</span>
+          {t("projects.title")}{" "}
+          <span className="text-primary text-glow">
+            {t("projects.titleHighlight")}
+          </span>
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto lg:text-xl">
-          Here are some of my recent projects. Each project was carefully
-          crafted with attention to detail, performance and user experience.
+          {t("projects.subtitle")}
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, key) => (
@@ -117,7 +117,7 @@ export const ProjectsSection = () => {
             className="cosmic-button w-fit flex items-center mx-auto gap-2"
             rel="noopener noreferrer"
           >
-            Check My GitHub <ArrowRight size={16} />
+            {t("projects.githubButton")} <ArrowRight size={16} />
           </a>
         </div>
       </div>

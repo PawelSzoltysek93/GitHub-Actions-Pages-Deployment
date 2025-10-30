@@ -19,6 +19,7 @@ import {
   SiWordpress,
 } from "react-icons/si";
 import { VscVscodeInsiders } from "react-icons/vsc";
+import { useTranslation } from "react-i18next";
 
 const skills = [
   //Frontend
@@ -75,6 +76,7 @@ const skills = [
 const categories = ["all", "frontend", "backend", "tools"];
 
 export const SkillsSection = () => {
+  const { t } = useTranslation();
   const [activeCategory, setActiveCategory] = useState("frontend");
 
   const filteredSkills = skills.filter(
@@ -85,7 +87,11 @@ export const SkillsSection = () => {
     <section id="skills" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-          My <span className="text-primary text-glow"> Skills</span>
+          {t("skills.title")}{" "}
+          <span className="text-primary text-glow">
+            {" "}
+            {t("skills.titleHighlight")}
+          </span>
         </h2>
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((category, key) => (
@@ -99,7 +105,7 @@ export const SkillsSection = () => {
                   : "bg-secondary/70 text-foreground hover:bd-secondary"
               )}
             >
-              {category}
+              {t(`skills.categories.${category}`)}
             </button>
           ))}
         </div>

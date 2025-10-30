@@ -4,23 +4,26 @@ import { cn } from "../lib/utils";
 import { toast } from "react-toastify";
 import { useRef } from "react";
 import type { FormEvent } from "react";
+import { useTranslation } from "react-i18next";
 
 const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 export const ContactSection = () => {
+  const { t } = useTranslation();
   const form = useRef<HTMLFormElement | null>(null);
+
   const sendEmail = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
       await emailjs.sendForm(serviceId, templateId, form.current!, publicKey);
-      toast.success("Message sent — check your email for confirmation.", {
+      toast.success(t("contact.toast.success"), {
         position: "top-right",
       });
       form.current?.reset();
     } catch {
-      toast.error("Failed to send message. Please try again later.", {
+      toast.error(t("contact.toast.error"), {
         position: "top-right",
       });
     }
@@ -30,22 +33,28 @@ export const ContactSection = () => {
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          Get In <span className="text-primary text-glow"> Touch</span>
+          {t("contact.title")}{" "}
+          <span className="text-primary text-glow">
+            {t("contact.titleHighlight")}
+          </span>
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto lg:text-xl">
-          Have a project in mind or want to collaborate? Feel free to reach out.
-          I'm always open to discussing new opportunities.
+          {t("contact.subtitle")}
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-8">
-            <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
+            <h3 className="text-2xl font-semibold mb-6">
+              {t("contact.info.title")}
+            </h3>
             <div className="space-y-6 justify-center">
               <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-full bg-primary/10">
                   <Mail className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-medium lg:text-xl"> Email</h4>
+                  <h4 className="font-medium lg:text-xl">
+                    {t("contact.info.email")}
+                  </h4>
                   <a
                     href="mailto:pawel.szoltysek.dev@gmail.com"
                     className="text-muted-foreground hover:text-primary transition-colors lg:text-xl"
@@ -59,7 +68,9 @@ export const ContactSection = () => {
                   <MapPin className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-medium lg:text-xl"> Location</h4>
+                  <h4 className="font-medium lg:text-xl">
+                    {t("contact.info.location")}
+                  </h4>
                   <a className="text-muted-foreground hover:text-primary hover:cursor-pointer transition-colors lg:text-xl">
                     Erkelenz, North Rhine-Westphalia, Germany
                   </a>
@@ -67,7 +78,9 @@ export const ContactSection = () => {
               </div>
             </div>
             <div className="pt-8">
-              <h4 className="font-medium mb-4 text-2xl"> Connect With Me</h4>
+              <h4 className="font-medium mb-4 text-2xl">
+                {t("contact.info.connect")}
+              </h4>
               <div className="flex space-x-4 justify-center">
                 <a
                   href="https://linkedin.com/in/pawel-szoltysek-dev"
@@ -87,14 +100,16 @@ export const ContactSection = () => {
             </div>
           </div>
           <div className="bg-card p-8 rounded-lg shadow-xs">
-            <h3 className="text-2xl font-semibold mb-6"> Send a message</h3>
+            <h3 className="text-2xl font-semibold mb-6">
+              {t("contact.form.title")}
+            </h3>
             <form ref={form} onSubmit={sendEmail} className="space-y-6">
               <div>
                 <label
                   htmlFor="user_name"
                   className="block text-sm font-medium mb-2"
                 >
-                  Your Name
+                  {t("contact.form.name")}
                 </label>
                 <input
                   id="user_name"
@@ -102,7 +117,7 @@ export const ContactSection = () => {
                   name="user_name"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
-                  placeholder="John Doe"
+                  placeholder={t("contact.form.namePlaceholder")}
                 />
               </div>
               <div>
@@ -110,7 +125,7 @@ export const ContactSection = () => {
                   htmlFor="from_email"
                   className="block text-sm font-medium mb-2"
                 >
-                  Your Email
+                  {t("contact.form.email")}
                 </label>
                 <input
                   id="from_email"
@@ -118,7 +133,7 @@ export const ContactSection = () => {
                   name="from_email"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
-                  placeholder="john.doe@gmail.com"
+                  placeholder={t("contact.form.emailPlaceholder")}
                 />
               </div>
               <div>
@@ -126,7 +141,7 @@ export const ContactSection = () => {
                   htmlFor="message"
                   className="block text-sm font-medium mb-2"
                 >
-                  Your Message
+                  {t("contact.form.message")}
                 </label>
                 <textarea
                   id="message"
@@ -134,7 +149,7 @@ export const ContactSection = () => {
                   required
                   rows={4}
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none"
-                  placeholder="Hello, I'd like to talk about..."
+                  placeholder={t("contact.form.messagePlaceholder")}
                 />
               </div>
               <button
@@ -144,22 +159,19 @@ export const ContactSection = () => {
                 )}
               >
                 <Send size={16} />
-                Send Message
+                {t("contact.form.submit")}
               </button>
 
               {/* Privacy Notice - DSGVO/GDPR compliant */}
               <p className="text-xs text-muted-foreground text-center leading-relaxed pt-2">
-                Your personal data will be used solely to respond to your
-                inquiry and will never be shared with third parties. By
-                submitting this form, you agree to the processing of your data
-                in accordance with our{" "}
+                {t("contact.form.privacy")}{" "}
                 <a
                   href="/privacy-policy"
                   className="text-primary hover:underline"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  privacy policy
+                  {t("contact.form.privacyLink")}
                 </a>
                 .
               </p>

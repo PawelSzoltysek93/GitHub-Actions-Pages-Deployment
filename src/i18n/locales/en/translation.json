@@ -1,0 +1,106 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "firstName": "Pawel",
+    "lastName": "Szoltysek",
+    "description": "I build websites that capture attention, inspire trust, and make every interaction a memorable experience for your users on every device.",
+    "cta": "View My Work",
+    "scroll": "Scroll"
+  },
+  "about": {
+    "title": "About",
+    "titleHighlight": "Me",
+    "heading": "Passionate Web Developer & Tech Creator",
+    "description1": "With a solid foundation in HTML/CSS, JavaScript and <highlight>React</highlight>, I am a highly motivated developer focused on building clean, efficient, and user-centric web solutions.",
+    "description2": "I'm passionate about creating elegant solutions to complex problems, and I'm constantly learning new technologies and techniques to stay at the forefront of the ever-evolving web landscape.",
+    "getInTouch": "Get In Touch",
+    "cards": {
+      "webDev": {
+        "title": "Web Development",
+        "description": "Creating responsive website and web applications with modern frameworks."
+      },
+      "uiux": {
+        "title": "UI/UX Design",
+        "description": "Building intuitive user interfaces and seamless user experiences."
+      },
+      "project": {
+        "title": "Project Management",
+        "description": "Leading projects from conception to completion with agile technologies."
+      }
+    }
+  },
+  "skills": {
+    "title": "My",
+    "titleHighlight": "Skills",
+    "categories": {
+      "all": "All",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Tools"
+    }
+  },
+    "projects": {
+    "title": "Featured",
+    "titleHighlight": "Projects",
+    "subtitle": "Here are some of my recent projects. Each project was carefully crafted with attention to detail, performance and user experience.",
+    "githubButton": "Check My GitHub",
+    "items": {
+      "cryptotrader": {
+        "description": "My first project fully build in JavaScript, completely in node.js terminal showing my skills in working with different APIs and fetching data."
+      },
+      "jobtracker": {
+        "description": "My Simple application in Next.js which I created for my own usage but it enrolled into something bigger allowing users creating own accounts and track their applying process."
+      },
+      "ecommerce": {
+        "description": "My own E-commerce shop created in Wordpress using WooCommerce plugin with basic shop functionality."
+      },
+      "redesign": {
+        "title": "Re-design Project",
+        "description": "Redesign project in which my task was to rebuild an old website with a modern look and improved user experience using new technologies such as React and Next.js."
+      }
+    }
+  },
+  "contact": {
+    "title": "Get In",
+    "titleHighlight": "Touch",
+    "subtitle": "Have a project in mind or want to collaborate? Feel free to reach out. I'm always open to discussing new opportunities.",
+    "info": {
+      "title": "Contact Information",
+      "email": "Email",
+      "location": "Location",
+      "connect": "Connect With Me"
+    },
+    "form": {
+      "title": "Send a message",
+      "name": "Your Name",
+      "namePlaceholder": "John Doe",
+      "email": "Your Email",
+      "emailPlaceholder": "john.doe@gmail.com",
+      "message": "Your Message",
+      "messagePlaceholder": "Hello, I'd like to talk about...",
+      "submit": "Send Message",
+      "privacy": "Your personal data will be used solely to respond to your inquiry and will never be shared with third parties. By submitting this form, you agree to the processing of your data in accordance with our",
+      "privacyLink": "privacy policy"
+    },
+    "toast": {
+      "success": "Message sent — check your email for confirmation.",
+      "error": "Failed to send message. Please try again later."
+    }
+  },
+  "footer": {
+    "createdBy": "Created by Pawel Szoltysek",
+    "legal": "Legal Notice",
+    "privacy": "Privacy Policy",
+    "backToTop": "Back to top"
+  }
+
+
+
+}
